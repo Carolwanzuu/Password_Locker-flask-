@@ -3,7 +3,7 @@ class User:
     Class User generates new instances of users
     """
 
-    pass
+    user_list = [] #empty user list
 
 def __init__(self, first_name,last_name,phone_number,email):
 
