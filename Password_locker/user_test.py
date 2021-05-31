@@ -27,5 +27,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.phone_number,"0387405923")
         self.assertEqual(self.new_user.email,"carol@gmail.com")
 
+    
+
 if __name__ == '__main__':
     unittest.main()
