@@ -15,17 +15,24 @@ class TestUser(unittest.TestCase):
         '''
         Method to run before each test cases
         '''
-        self.new_user = User("Carol", "Wanzuu", "0387405923","carol@gmail.com")
+        self.new_user = User("Carol", "trial@01")
 
     def test_init(self):
         '''
         tests if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.first_name,"Carol")
-        self.assertEqual(self.new_user.last_name,"Wanzuu")
-        self.assertEqual(self.new_user.phone_number,"0387405923")
-        self.assertEqual(self.new_user.email,"carol@gmail.com")
+        self.assertEqual(self.new_user.user_name,"Carol")
+        self.assertEqual(self.new_user.password,"trial@01")
+        
+
+    def test_add_user(self):
+        '''
+        test to check if new user is added
+        '''
+
+        self.new_user.add_user()
+        self.assertEqual(len(User.users_list),1)
 
     
 

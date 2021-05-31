@@ -3,7 +3,7 @@ class User:
     Class User generates new instances of users
     """
 
-    user_list = [] #empty user list
+    users_list = [] #empty user list
 
     def __init__(self, user_name,password):
 
@@ -18,4 +18,12 @@ class User:
 
         self.user_name = user_name
         self.password = password
+
+    def add_user(self):
+        '''
+        save a new user instance
+        '''
+
+        User.users_list.append(self)
+        
        
