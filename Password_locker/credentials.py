@@ -48,3 +48,12 @@ class Credential:
 
         gen_password = ''.join(random.choice(char) for _ in range(size))
         return gen_password
+
+    @classmethod
+    def display_credentials(cls, user_name):
+        '''
+        Class to display already saved credentials
+        '''
+
+        user_credentials_list = []
+        
