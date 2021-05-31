@@ -17,4 +17,15 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user = User("Carol", "Wanzuu", "0387405923","carol@gmail.com")
 
-        
+    def test_init(self):
+        '''
+        tests if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_contact.first_name,"Carol")
+        self.assertEqual(self.new_contact.last_name,"Wanzuu")
+        self.assertEqual(self.new_contact.phone_number,"0387405923")
+        self.assertEqual(self.new_contact.email,"carol@gmail.com")
+
+if __name__ == '__main__':
+    unittest.main()
