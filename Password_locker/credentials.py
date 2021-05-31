@@ -1,5 +1,6 @@
 from user import User
-
+import string
+import random
 
 class Credential:
     """
@@ -39,3 +40,11 @@ class Credential:
         '''
 
          Credential.credentials_list.append(self)
+
+    def generate_password(size = 10,  char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+        '''
+        function to generate a password
+        '''
+
+        gen_password = ''.join(random.choice(char) for _ in range(size))
+        return gen_password
