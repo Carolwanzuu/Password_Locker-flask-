@@ -25,5 +25,12 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(current_user, Credential.verify_user(userOne.username,userOne.password))
 
 
+    def setUp(self):
+        '''
+        function to create an accounts credentials before each test
+        '''
+        self.new_credential = Credential("Stella", "facebook","trial@02")
+
+
 if __name__ == '__main__':
     unittest.main()
