@@ -113,3 +113,26 @@ def main():
 						print(' ')
 						print(f'Credential Created: Site Name: {site_name}  - Password: {password}')
 						print(' ')
+                    elif short_code == 'dc':
+						print(' ')
+						if display_credentials(user_name):
+							print('Here is a list of all your credentials')
+							print(' ')
+							for credential in display_credentials(user_name):
+								print(f'Site Name: {credential.site_name} - Password: {credential.password}')
+							print(' ')	
+						else:
+							print(' ')
+							print("You don't seem to have any credentials saved yet")
+							print(' ')
+					
+
+			else: 
+				print(' ')
+				print('Oops! Wrong details entered. Try again or Create an Account.')	
+
+    else:
+			print("-"*60)
+			print(' ')
+			print('Oops! Wrong option entered. Try again.')
+					
