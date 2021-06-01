@@ -26,6 +26,12 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.password,"trial@01")
         
 
+    def tearDown(self):
+        '''
+        tearDown method cleans up after each test case has run
+        '''
+        User.users_list = []
+
     def test_add_user(self):
         '''
         test to check if new user is added
