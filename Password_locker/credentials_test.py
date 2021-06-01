@@ -40,5 +40,25 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.password, "trial@02")
 
 
+    def test_save_credentials(self):
+        '''
+        tests whether credentials are saved
+        '''
+        self.new_credential.save_credentials()
+        twitter = Credential("Charles", "twitter", "trial@03")
+        twitter.save_credentials()
+        self.assertEqual(len(Credential.credentials_list),2)  
+
+    def test_find_by_site(self):
+        '''
+        tests to check if we can get users based on the name of the site
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credential("Agnes", "Twitter", "trial@04")
+        test_credential.save_credentials()
+        credential_exists = Credential.find_by_site_name("Twitter")
+		self.assertEqual(credential_exists.password,test_credential.password)
+
+
 if __name__ == '__main__':
     unittest.main()
