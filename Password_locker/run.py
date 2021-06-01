@@ -9,7 +9,6 @@ from credentials import Credential
         new_user = User(user_name, password)
         return new_user
 
-
     def add_user(self):
         '''
         save a new user instance
@@ -24,7 +23,6 @@ from credentials import Credential
         verify_user = Credential.verify_user(user_name, password)
         return verify_user
 
-
     def generate_password():
         '''
         function to generate a password automatically
@@ -32,12 +30,11 @@ from credentials import Credential
         generate_password = Credential.generate_password()
         return generate_password
 
-
-    def create_credential(user_name,site_name,password):
+    def create_credential(user_name, site_name, password):
         '''
         Function to create a new credential
         '''
-        new_credential=Credential(user_name,site_name,password)
+        new_credential = Credential(user_name, site_name, password)
         return new_credential
 
     def save_credentials(self):
@@ -46,7 +43,7 @@ from credentials import Credential
             '''
             Credential.save_credentials()
 
-    
+
 def main():
 	print(' ')
 	print('Hello! Welcome to Password Locker.')
@@ -64,7 +61,7 @@ def main():
 			print('To create a new account:')
 			user_name = input('Enter your user name - ').strip()
 			password = input('Enter your password - ').strip()
-			add_user(create_user(user_name,password))
+			add_user(create_user(user_name, password))
 			print(" ")
 			print(f'New Account Created for:{user_name} using password: {password}')
 
@@ -72,9 +69,9 @@ def main():
 			print("-"*60)
 			print(' ')
 			print('To login, enter your account details:')
-			user_name = input('Enter your first name - ').strip()
+			user_name = input('Enter your user name - ').strip()
 			password = str(input('Enter your password - '))
-			user_exists = verify_user(user_name,password)
+			user_exists = verify_user(user_name, password)
 			if user_exists == user_name:
 				print(" ")
 				print(f'Welcome {user_name}. Please choose an option to continue.')
@@ -109,9 +106,10 @@ def main():
 								break
 							else:
 								print('Oops! Wrong option entered. Try again.')
-						save_credentials(create_credential(user_name,site_name,password))
+						save_credentials(create_credential(user_name, site_name, password))
 						print(' ')
-						print(f'Credential Created: Site Name: {site_name}  - Password: {password}')
+						print(
+						    f'Credential Created: Site Name: {site_name}  - Password: {password}')
 						print(' ')
                     elif short_code == 'dc':
 						print(' ')
