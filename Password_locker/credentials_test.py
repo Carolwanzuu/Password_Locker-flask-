@@ -59,6 +59,16 @@ class TestCredential(unittest.TestCase):
     #     credential_exists = Credential.find_by_site_name("Twitter")
 	# 	self.assertEqual(credential_exists.password,test_credential.password)
 
+    def test_delete_credentials(self):
+        '''
+        test delete_credential to test whether it can remove credentials from list
+        '''
+        self.new_credential.save_credentials()
+        test_credentials = Credential("Agnes", "Facebook", "trial@04")
+        test_credentials.save_credentials()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credential.credentials_list),1)
 
 if __name__ == '__main__':
     unittest.main()
