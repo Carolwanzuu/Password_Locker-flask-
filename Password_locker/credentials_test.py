@@ -40,6 +40,12 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.password, "trial@02")
 
 
+    def tearDown(self):
+        '''
+        tearDown method cleans up after each test case has run
+        '''
+        Credential.credentials_list = []
+
     def test_save_credentials(self):
         '''
         tests whether credentials are saved
