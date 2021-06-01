@@ -51,5 +51,8 @@ As a user I would like:
 ## Technologies Used
 * Python3.8
 
+### Live Site
+view [live]
+
 ## License
-MIT &copy
+This project is under the  [MIT](LICENSE) license
