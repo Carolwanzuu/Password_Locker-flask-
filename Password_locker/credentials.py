@@ -63,16 +63,22 @@ class Credential:
         return user_credentials_list
 
 
-    @classmethod
-	def find_by_site_name(cls, site_name):
-		'''
-		Method that takes in a site_name and returns a credential that matches the site_name.
-		'''
+    # @classmethod
+	# def find_by_site_name(cls, site_name):
+	# 	'''
+	# 	Method that takes in a site_name and returns a credential that matches the site_name.
+	# 	'''
 
-        # user_credentials_list = []
-		for credential in cls.credentials_list:
-			if credential.site_name == site_name:
-                # user_credentials_list.append(credential)
+    #     # user_credentials_list = []
+	# 	for credential in cls.credentials_list:
+	# 		if credential.site_name == site_name:
+    #             # user_credentials_list.append(credential)
 
-		return credentials
+	# 	return credentials
     
+    def delete_credentials(self):
+        '''
+        delete credentials from the list
+        '''
+
+        Credential.credentials_list.remove(self)
