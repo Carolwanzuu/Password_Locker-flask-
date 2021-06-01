@@ -34,25 +34,23 @@ As a user I would like:
 ### Cloning
 * In your terminal:
         
-        $ git clone
+        $ git clone https://github.com/Carolwanzuu/Password_Locker-flask-.git/
         $ cd Password-Locker
 
 ## Running the Application
 * To run the application, in your terminal:
 
         $ chmod +x password_locker.py
-        $ ./password_locker.py
+        $ ./run.py
         
 ## Testing the Application
 * To run the tests for the class file:
 
-        $ python3.8 user_credentials_test.py
+        $ python3.8 test_run.py
         
 ## Technologies Used
 * Python3.8
 
-### Live Site
-view [live]
 
 ## License
 This project is under the  [MIT](LICENSE) license
