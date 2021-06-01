@@ -31,6 +31,14 @@ class TestCredential(unittest.TestCase):
         '''
         self.new_credential = Credential("Stella", "facebook","trial@02")
 
+    def test_init(self):
+        '''
+        This checks whether initialization of credentials was successful
+        '''
+        self.assertEqual(self.new_credential.user_name, "Stella")
+        self.assertEqual(self.new_credential.site_name, "facebook")
+        self.assertEqual(self.new_credential.password, "trial@02")
+
 
 if __name__ == '__main__':
     unittest.main()
